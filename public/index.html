@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Correção de E-mail</title>
+  <style>
+    :root {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .card {
+      background: #111827;
+      padding: 1.25rem;
+      border-radius: 1rem;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    }
+
+    h1 {
+      margin: 0 0 .75rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+      opacity: .8;
+    }
+
+    label {
+      display: block;
+      margin-bottom: .5rem;
+      font-weight: 600;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: .75rem 1rem;
+      border-radius: .75rem;
+      border: 1px solid #334155;
+      background: #0b1220;
+      color: #e2e8f0;
+      font-size: 1rem;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: .5rem;
+      margin-top: .75rem;
+    }
+
+    button {
+      padding: .75rem 1rem;
+      border-radius: .75rem;
+      border: 1px solid #334155;
+      background: #1f2937;
+      color: #e2e8f0;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #374151;
+    }
+
+    .result {
+      margin-top: 1rem;
+      padding: .75rem 1rem;
+      background: #0b1220;
+      border-radius: .75rem;
+      border: 1px solid #334155;
+    }
+
+    .muted {
+      opacity: .7;
+      font-size: .9rem;
+    }
+
+    .ok {
+      color: #22c55e;
+    }
+
+    .warn {
+      color: #f59e0b;
+    }
+
+    .err {
+      color: #ef4444;
+    }
+
+    .foot {
+      margin-top: 1rem;
+      font-size: .85rem;
+      opacity: .7;
+    }
+
+    small code {
+      background: #0b1220;
+      padding: .1rem .3rem;
+      border-radius: .375rem;
+      border: 1px solid #334155;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Correção de E-mail</h1>
+    <p>Digite seu e-mail. Nós corrigimos o domínio automaticamente (gmail, yahoo, hotmail, outlook)
+      <label for="email">E-mail</label>
+    <div class="row">
+      <input id="email" type="email" placeholder="ex.: joao@gmio.con" />
+      <button id="btn-corrigir">Corrigir</button>
+    </div>
+
+    <div id="out" class="result muted">Sem resultado ainda.</div>
+
+    <div class="foot">
+      <small>Dica: Exemplos — <code>joao@gmio.com</code>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
